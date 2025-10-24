@@ -1,0 +1,39 @@
+<section class="login-container">
+  <div class="login-card">
+    <h2>Login do Sócio Torcedor</h2>
+    <form (ngSubmit)="entrar()">
+      <div class="form-group">
+        <label for="email">Login:</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input
+          type="password"
+          id="senha"
+          [(ngModel)]="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Entrar</button>
+
+      <p class="register-text">
+        Ainda não é sócio?
+        <a routerLink="/cadastro">Cadastrar-se</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+
