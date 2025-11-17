@@ -1,59 +1,122 @@
-# MeuTrabalhoAngular
+# 🎽 Sistema Sócio Torcedor – Projeto Angular + JSON Server
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+Este projeto foi desenvolvido como trabalho final da disciplina de Desenvolvimento Web.  
+O sistema simula o portal de um programa de sócio torcedor, permitindo cadastro de usuários, escolha de planos, login, troca de plano e exclusão de conta.
 
-## Development server
+Todo o front-end foi desenvolvido em **Angular**, e o back-end é simulado utilizando **JSON Server (API Fake)**.
 
-To start a local development server, run:
+---
+
+## 🚀 Funcionalidades Principais
+
+### 🏠 **Home**
+- Página inicial com apresentação do programa Sócio Torcedor.
+- Navegação para Login e Planos.
+
+### 🛒 **Planos**
+- Três planos disponíveis: Sócio++, SócioPlus e SuperSócio.
+- Dados carregados via API Fake (JSON Server).
+- Página de detalhes com benefícios do plano.
+
+### 📝 **Criar Conta (Assinar Plano)**
+- Formulário reativo com validações.
+- O usuário já cria sua conta vinculado a um plano.
+- Registro salvo na API Fake (POST /usuarios).
+
+### 🔐 **Login**
+- Autenticação via API Fake.
+- Exibição de mensagens de erro.
+- Redirecionamento para o Dashboard quando sucesso.
+
+### 📊 **Dashboard**
+- Exibe informações do usuário logado:
+  - Nome  
+  - Plano atual  
+  - Jogos assistidos  
+  - Próximos jogos  
+  - Time favorito (Paysandu)
+- Botões:
+  - **Trocar plano**
+  - **Excluir conta**
+
+### 🔄 **Trocar Plano**
+- Lista todos os planos no sistema.
+- Usuário seleciona um novo plano.
+- Atualização via API Fake (PATCH /usuarios/:id).
+
+### ❌ **Excluir Conta**
+- Remove o usuário do sistema (DELETE /usuarios/:id).
+- Redireciona para a página inicial.
+
+---
+
+## 🗄️ API Fake (JSON Server)
+
+Este projeto utiliza **JSON Server** para simular uma API REST.
+
+Para iniciar a API:
 
 ```bash
-ng serve
-```
+npx json-server --watch db.json --port 3000
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+GET    /planos
+GET    /usuarios
+POST   /usuarios
+PATCH  /usuarios/:id
+DELETE /usuarios/:id
 
-## Code scaffolding
+🛠️ Tecnologias Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular 16+
 
-```bash
-ng generate component component-name
-```
+TypeScript
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+HTML5 / CSS3
 
-```bash
-ng generate --help
-```
+JavaScript
 
-## Building
+JSON Server
 
-To build the project run:
+Git & GitHub
 
-```bash
-ng build
-```
+GitFlow (main / develop)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+src/
+ └── app/
+      ├── pages/
+      │     ├── home/
+      │     ├── login/
+      │     ├── produtos/
+      │     ├── produto-detalhe/
+      │     ├── dashboard/
+      │     ├── trocar-plano/
+      │     └── assinar/
+      └── service/
+            ├── usuarios.service.ts
+            ├── produtos.service.ts
+            └── auth.service.ts
+db.json
 
-## Running unit tests
+▶️ Como Rodar o Projeto
+1. Instalar dependências
+npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+2. Rodar o backend (API Fake)
+npx json-server --watch db.json --port 3000
 
-```bash
-ng test
-```
+3. Rodar o front-end Angular
+npm start
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+Abra no navegador:
 
-```bash
-ng e2e
-```
+http://localhost:4200
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+👨‍💻 Desenvolvedores
 
-## Additional Resources
+Denilson
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Rafael
+
+Curso: Ciência da Computação
+Universidade FUMEC
