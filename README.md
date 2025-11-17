@@ -125,22 +125,6 @@ Usuário deslogado
 
 Redirecionado para home
 
-📚 Estrutura do Projeto
-src/
- └── app/
-      ├── pages/
-      │     ├── home/
-      │     ├── login/
-      │     ├── planos/
-      │     ├── produto-detalhe/
-      │     ├── dashboard/
-      │     ├── assinar/
-      │     └── trocar-plano/
-      ├── service/
-      │     ├── auth.service.ts
-      │     └── produtos.service.ts
-      └── app.routes.ts
-db.json
 
 👨‍💻 Desenvolvedores
 
