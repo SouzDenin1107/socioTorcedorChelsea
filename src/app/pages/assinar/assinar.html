@@ -1,0 +1,32 @@
+<section class="container">
+  
+  <h1>Assinar {{ planoNome }}</h1>
+  <p class="sub">Complete seus dados para finalizar sua assinatura.</p>
+
+  <form (ngSubmit)="assinar()">
+
+    <div class="grupo">
+      <label>Nome completo</label>
+      <input type="text" [(ngModel)]="usuario.nome" name="nome" placeholder="Digite seu nome">
+    </div>
+
+    <div class="grupo">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="usuario.email" name="email" placeholder="email@exemplo.com">
+    </div>
+
+    <div class="grupo">
+      <label>Senha</label>
+      <input type="password" [(ngModel)]="usuario.senha" name="senha" placeholder="Digite uma senha">
+    </div>
+
+    <div class="grupo">
+      <label>Plano Selecionado</label>
+      <input type="text" [value]="planoNome" disabled>
+    </div>
+
+    <button type="submit" class="btn">Confirmar Assinatura</button>
+
+  </form>
+
+</section>

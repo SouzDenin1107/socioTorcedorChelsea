@@ -1,0 +1,41 @@
+<section class="dashboard">
+
+  <h1>Bem-vindo, {{ usuario.nome }}!</h1>
+  <p class="sub">Você está logado como <strong>{{ usuario.plano }}</strong> do <strong>{{ usuario.time }}</strong>.</p>
+
+  <!-- BOTÃO TROCAR PLANO -->
+  <button class="btn-alterar-plano" routerLink="/trocar-plano">
+  Alterar meu plano
+</button>
+
+  <button class="btn-excluir" (click)="excluirConta()">
+  Excluir minha conta
+  </button>
+
+  <div class="cards">
+
+    <!-- CARD PLANO ATUAL -->
+    <div class="card destaque">
+      <h2>{{ usuario.plano }}</h2>
+      <p class="txt">Plano premium com benefícios exclusivos.</p>
+      <p class="big-number">{{ usuario.jogosAssistidos }}</p>
+      <p class="subtxt">Jogos que você já compareceu</p>
+    </div>
+
+    <!-- CARD PROXIMOS JOGOS -->
+    <div class="card">
+      <h2>Próximos Jogos</h2>
+      <ul class="lista-jogos">
+        <li *ngFor="let jogo of proximosJogos">
+          <strong>{{ usuario.time }}</strong> x {{ jogo.adversario }}  
+          <span>{{ jogo.data }} — {{ jogo.local }}</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+

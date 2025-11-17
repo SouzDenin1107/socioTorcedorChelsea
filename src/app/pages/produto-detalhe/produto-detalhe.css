@@ -1,0 +1,45 @@
+.detalhe-container {
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.btn-assinar {
+  padding: 12px 25px;
+  background: #ffd000;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-assinar:hover {
+  background: #e6bf00;
+}

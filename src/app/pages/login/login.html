@@ -28,6 +28,9 @@
 
       <button type="submit" class="btn btn-primary">Entrar</button>
 
+      <!-- MENSAGEM DE ERRO ADICIONADA -->
+      <p class="erro" *ngIf="erro">{{ erro }}</p>
+
       <p class="register-text">
         Ainda não é sócio?
         <a routerLink="/cadastro">Cadastrar-se</a>
@@ -35,5 +38,3 @@
     </form>
   </div>
 </section>
-
-

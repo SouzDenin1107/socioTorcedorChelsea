@@ -1,0 +1,53 @@
+{
+  "planos": [
+    {
+      "id": "1",
+      "nome": "Sócio++",
+      "preco": 29.9,
+      "descricao": "Plano inicial para quem quer começar a apoiar.",
+      "beneficios": [
+        "Acesso antecipado a ingressos",
+        "Desconto em produtos oficiais",
+        "Carteirinha digital"
+      ]
+    },
+    {
+      "id": "2",
+      "nome": "SócioPlus",
+      "preco": 49.9,
+      "descricao": "Plano intermediário com mais benefícios.",
+      "beneficios": [
+        "Todos do Sócio++",
+        "Camiseta oficial anual",
+        "Participação em sorteios"
+      ]
+    },
+    {
+      "id": "3",
+      "nome": "SuperSócio",
+      "preco": 79.9,
+      "descricao": "Plano máximo para o torcedor raiz do Paysandu.",
+      "beneficios": [
+        "Todos do Sócio++",
+        "Camiseta oficial anual",
+        "Participação em sorteios"
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Denin",
+      "email": "denin@example.com",
+      "senha": "123456",
+      "planoId": 3
+    },
+    {
+      "id": "b4cc",
+      "nome": "Rafael",
+      "email": "Rafael@",
+      "senha": "123456",
+      "plano": "SócioPlus"
+    }
+  ]
+}

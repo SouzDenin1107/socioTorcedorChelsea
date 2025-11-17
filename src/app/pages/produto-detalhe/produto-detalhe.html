@@ -1,1 +1,25 @@
-<p>produto-detalhe works!</p>
+<section class="detalhe-container" *ngIf="plano">
+  
+  <h1>{{ plano.nome }}</h1>
+  <p class="preco">{{ plano.preco }}</p>
+
+  <h3>Benefícios do plano:</h3>
+
+  <ul>
+    <li *ngFor="let b of plano.beneficios">{{ b }}</li>
+  </ul>
+
+  <!-- BOTÃO PARA IR PARA A TELA DE CADASTRO DO PLANO -->
+  <button 
+    class="btn-assinar"
+    [routerLink]="['/assinar', plano.id]">
+    Assinar Agora
+  </button>
+
+</section>
+
+<section *ngIf="!plano">
+  <h2>Plano não encontrado.</h2>
+</section>
+
+

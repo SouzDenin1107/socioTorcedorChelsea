@@ -1,1 +1,23 @@
-<p>produtos works!</p>
+<section class="planos-container">
+  <h1 class="titulo">Planos Sócio Torcedor</h1>
+  <p class="subtitulo">Escolha o plano ideal para apoiar o clube!</p>
+
+  <div class="cards">
+    <div class="card" *ngFor="let p of planos" [style.borderColor]="p.cor">
+      <h2>{{ p.nome }}</h2>
+      <p class="preco">{{ p.preco }}</p>
+
+      <ul>
+        <li *ngFor="let b of p.beneficios">{{ b }}</li>
+      </ul>
+
+      <button class="btn-assinar" [routerLink]="['/produto', p.id]">
+  Ver detalhes
+</button>
+
+
+
+    </div>
+  </div>
+</section>
+

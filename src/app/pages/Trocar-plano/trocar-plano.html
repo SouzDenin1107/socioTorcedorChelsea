@@ -1,0 +1,16 @@
+<section class="trocar">
+
+  <h1>Trocar de Plano</h1>
+  <p>Escolha um novo plano para continuar</p>
+
+  <div class="cards">
+    <div class="card" *ngFor="let p of planos">
+      <h2>{{ p.nome }}</h2>
+      <p class="preco">R$ {{ p.preco }}</p>
+      <p>{{ p.descricao }}</p>
+
+      <button (click)="escolher(p)">Selecionar</button>
+    </div>
+  </div>
+
+</section>
